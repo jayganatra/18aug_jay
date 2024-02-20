@@ -1,0 +1,9 @@
+create table exam
+(
+   rollno int,
+   s_code varchar(20),
+   marks int,
+   p_code varchar(30)
+);
+
+alter table exam add foreign key(rollno)reference reference student(rollno);

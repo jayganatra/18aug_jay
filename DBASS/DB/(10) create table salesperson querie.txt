@@ -1,0 +1,14 @@
+CREATE TABLE salseperson
+(
+  pk_sno int(11) DEFAULT NULL,
+  sname varchar(30) DEFAULT NULL,
+  city varchar(20) DEFAULT NULL,
+  comm float DEFAULT NULL
+);
+
+INSERT INTO salseperson (pk_sno,sname,city,comm)VALUES
+(1001, 'peel', 'london', 0.12),
+(1002, 'serres', 'san jose', 0.13),
+(1004, 'motika', 'londan', 0.11),
+(1007, 'rafkin', 'barcelona', 0.15),
+(1003, 'axelrod', 'new york', 0.1);

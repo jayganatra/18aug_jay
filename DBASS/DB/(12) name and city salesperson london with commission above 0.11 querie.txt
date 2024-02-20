@@ -1,0 +1,1 @@
+SELECT sname,city FROM salseperson WHERE city = 'London' AND comm > .11;

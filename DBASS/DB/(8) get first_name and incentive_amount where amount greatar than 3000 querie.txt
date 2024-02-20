@@ -1,0 +1,1 @@
+select employee.first_name,incentive.incentive_amount from employee inner join incentive on employee.employeeid=incentive.employee_ref_id and incentive_amount >3000 where incentive_amount order by incentive_amount;

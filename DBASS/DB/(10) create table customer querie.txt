@@ -1,0 +1,19 @@
+CREATE TABLE customer
+ (
+  pk_cnm int(11),
+  cname varchar(20),
+  city varchar(30),
+  rating int(11),
+  fk_sno int(11)
+);
+
+INSERT INTO `customer` (`pk_cnm`, `cname`, `city`, `rating`, `fk_sno`) VALUES
+(201, 'hoffman', 'london', 100, 1001),
+(202, 'giovanne', 'roe', 200, 1003),
+(203, 'liu', 'san jose', 300, 1002),
+(204, 'grass', 'barcelona', 100, 1002),
+(206, 'clemens', 'london', 300, 1007),
+(207, 'pereira', 'roe', 100, 1004);
+
+
+

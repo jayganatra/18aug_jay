@@ -1,0 +1,13 @@
+create table incentive
+(
+   employee_ref_id int
+   incentive_date date
+   incentive_amount int
+);
+
+insert into incentive(employee_ref_id,incentive_date,incentive_amount)values
+(1,'1-feb-13',5000),
+(2,'1-feb-13',3000),
+(3,'1-feb-13',4000),
+(1,'1-jan-13',4500),
+(2,'1-jan-13',3500);

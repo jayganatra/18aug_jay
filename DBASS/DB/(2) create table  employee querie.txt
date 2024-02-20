@@ -1,0 +1,19 @@
+create table employee 
+(
+   employeeid int,
+   first_name varchar(20),
+   last_name varchar(30),
+   salary int,
+   joining_date date,
+   department varchar(40)
+);
+
+insert into employee(employeeid,first_name,last_name,salary,joining_date,department)values
+(1,'john','abraham',1000000,'1-jan-13 12:00 am','banking'),
+(2,'michael','clarke',800000,'1-jan-13 12:00 am','insurance'),
+(3,'roy','thomas',700000,'1-feb-13 12:00 am','banking'),
+(4,'tom','jose',600000,'1-feb-13 12:00 am','insurance'),
+(5,'jerry','pinto',650000,'1-feb-13 12:00 am','insurance'),
+(6,'philip','mathew',750000,'1-jan-13 12:00 am','services'),
+(7,'tastname1',123,650000,'1-jan-13 12:00am','services'),
+(8,'testname2,lname%,600000,'1-feb-13 12:00am','insurance');

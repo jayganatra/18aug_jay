@@ -1,0 +1,2 @@
+delimiter $$ create TRIGGER inserts after insert on employee for each row begin insert into employee_detail set skill = new.last_name;
+end$$

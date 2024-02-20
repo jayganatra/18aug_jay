@@ -1,0 +1,43 @@
+1)What do you understand By Database 
+ans- A  database is  collation of  data and information.
+
+2)What is Normalization?
+ ANS- A process of data in database 
+	- 1 st Form
+	- 2 nd Form
+	- n rd Form
+3)What is Difference between DBMS and RDBMS? 
+ans-
+	 RDBMS                       			DBMS
+- Data stored is in table format		-Data stored is in the file format
+
+-Oracle, SQL Server.				-XML, Microsoft Access.
+
+-Multiple data are accessible 			-Individual access 
+
+4)What is MF Cod Rule of RDBMS Systems?
+ans-thirteen rules correct Relational Database Management System
+
+5)What do you understand By Data Redundancy?
+ans-the same information are stored in same time
+
+6)What is DDL Interpreter?
+ans- Data Definition Language stores the record in a data dictionary+
+
+7)What is DML Compiler in SQL?
+ans-  -> data manipulation language. insert,update,delete
+
+8)What is SQL Key Constraints writing an Example of SQL Key Constraints
+ ans
+	 - NOTE NULL   -> column have not null value
+  	 - UNIQUE      -> colume have unique data
+ 	 - PRIMARY KEY ->  use unique data and not null value,combination of a not null and unique 
+ 	 - FOREIGN KEY -> use raference on other table
+
+9)What is save Point? How to create a save Point write a Query? 
+ans- save is command of database.
+-->SAVEPOINT SAVEPOINT_NAME
+
+10.What is trigger and how to create a Trigger in SQL? 
+ans-trigger use to store data in database in automatically
+

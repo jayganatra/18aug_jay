@@ -1,0 +1,1 @@
+select * from salseperson where comm between 0.10 and 0.12;
