@@ -1,5 +1,7 @@
 1)What do you understand By Database 
-ans- A  database is  collation of  data and information.
+ans- A  database is  collation of  data and information.that is organized and stored
+	 that allows for efficient retrieval, updating, and management of information.
+
 
 2)What is Normalization?
  ANS- A process of data in database 
@@ -15,29 +17,68 @@ ans-
 
 -Multiple data are accessible 			-Individual access 
 
+ - it deal with  small                        -  it deal with large quanity
+   quanity of data.                              of data.
+                             
+ -normalisation is          		      -  normalisation is not 
+   archievable.              			  archivable.
+                             
+ - microsoft access.         		       - SQL server.
+
 4)What is MF Cod Rule of RDBMS Systems?
-ans-thirteen rules correct Relational Database Management System
+ans-       1.The Foundation Rule
+ 	   2.The Information Rule
+           3.The Guaranteed Access Rule
+           4.Systematic Treatment Of NULL Value
+ 	   5.Distribution Independence
+ 	   6. The View Updating Rule
+ 	   7.High-Level Insert, Update & Delete Rule
+ 	   8.Physical Data Independence
+    	   9.Logical Data Independence
+           10.Integrity Independence
+	  11.The Comprehensive Data Sublanguage Rule
+ 	  12.The Non-subversion Rule
 
 5)What do you understand By Data Redundancy?
-ans-the same information are stored in same time
+ans-the same information are stored in same time.
+    -Data redundancy refers to the duplication of data within a database system.
 
 6)What is DDL Interpreter?
-ans- Data Definition Language stores the record in a data dictionary+
+ans- Data Definition Language stores the record in a data dictionary
+   1.CREATE=>use the create database and table 
+   2.USE => to use in database
+   3.DESC=>see the structure of the table
+   4.DROP =>delete database,table and column
+   5.ALTER =>add column,key constraints and auto_increment
+   6.UPDATE =>update all detail
+
 
 7)What is DML Compiler in SQL?
 ans-  -> data manipulation language. insert,update,delete
+  	  1.INSERT
+ 	  2. UPDATE   
+ 	  3. DELETE   
+  	 4. TRUNCATE
+
 
 8)What is SQL Key Constraints writing an Example of SQL Key Constraints
  ans
-	 - NOTE NULL   -> column have not null value
-  	 - UNIQUE      -> colume have unique data
- 	 - PRIMARY KEY ->  use unique data and not null value,combination of a not null and unique 
- 	 - FOREIGN KEY -> use raference on other table
+	 1. NOTE NULL column have not null value
+  	 2.UNIQUE is use colume have unique data
+ 	 3.PRIMARY KEY use to  unique data and not null value,combination of a not null and unique 
+ 	 4.FOREIGN KEY touse raference on other table
 
 9)What is save Point? How to create a save Point write a Query? 
-ans- save is command of database.
--->SAVEPOINT SAVEPOINT_NAME
+ans- save is command of database. 
+	 1.=>create savepoint savepoint;
+       	2.=>SAVEPOINT SAVEPOINT_NAME
 
 10.What is trigger and how to create a Trigger in SQL? 
 ans-trigger use to store data in database in automatically
+   => A trigger is a special type of stored procedure in a database management system 
+
+ - DELIMITER $$ create trigger trigger_name (after|before) {insert|update|delete} on table_name for each row 
+   begin
+   insert into table_name set column_name = new.column_name
+   END$$
 
