@@ -1,0 +1,90 @@
+
+CREATE TABLE City
+(
+    id int AUTO_INCREMENT PRIMARY KEY,
+    city_name  varchar(50) ,
+    lat decimal(10,6),
+    long decimal(10,6),
+    country_id int,
+    FOREIGN KEY (country_id) REFERENCES Country (id)
+    );
+----------------------------------------------------------------------------
+INSERT INTO City (id, city_name, lat, long, country_id)
+VALUES
+(1, 'Berlin', '52.520008','13.404954', '1'),
+(2, 'Belgrade', '44.787197','20.457273', '2'),
+(3, 'Zagreb', '45.815399','15.966568', '3'),
+(4, 'New York', '40.730610','-73.935242', '4'),
+(5, 'Los Angeles', '34.052235','-118.243683', '4'),
+(6, 'Warsaw', '52.237049','21.017532', '5');
+
+------------------------------------------------------------------------------------
+CREATE TABLE Country 
+(
+    id int AUTO_INCREMENT PRIMARY KEY,
+    country_name  char(50) ,
+    country_name_eng  char(50),
+    country_code varchar(30)
+    );
+-------------------------------------------------------------------------------------
+INSERT INTO Country (id,  country_name,  country_name_eng,  country_code)
+VALUES
+(1, 'Deutschland', 'Germany','DEU'),
+(2, 'Srbija', 'Serbia','SRB'),
+(3, 'Hrvatska', 'Croatia','HRV'),
+(4, 'United States of America', 'United States of America','USA'),
+(5, 'Polska', 'Poland','POL'),
+(6, 'Espana', 'Spain','ESP'),
+(7, 'Rossiya', 'Russia','RUS');
+----------------------------------------------------------------------------------------
+CREATE TABLE Customers
+(
+    id int AUTO_INCREMENT PRIMARY KEY,
+    customer_name  varchar(50) ,
+    city_id int,
+    FOREIGN KEY (city_id) REFERENCES City(id),
+    customer_address varchar(50),
+    next_call_date date,
+    ts_inserted datetime(3)
+);
+-------------------------------------------------------------------------------------------------
+INSERT INTO Customers (id, customer_name, city_id, customer_address, next_call_date, ts_inserted)
+VALUES
+(1, 'Jewelry Store', '4','Long Street 120', '2020-01-21', '2020-01-09 14:01:20.000'),
+(2, 'Bakery', '1','Kurfurstendamm 25', '2020-02-21', '2020-01-09 17:52:15.000'),
+(3, 'Cafe', '1','TauentzienstraBe 44', '2020-01-21', '2020-01-10 08:02:49.000'),
+(4, 'Restaurant', '3','Ulica lipa 15', '2020-01-21', '2020-01-10 09:20:21.000');
+--------------------------------------------------------------------------------------------------
+TASK 1
+---------------------------------------------------------------------------------------------------
+SELECT 
+		Country.id AS country_id,
+		Country.country_name_eng AS country_name,
+		City.city_name,
+		Customers.customer_name
+		FROM Country
+		LEFT JOIN City ON Country.id = City.country_id
+		LEFT JOIN Customers ON City.id = Customers.city_id
+		ORDER BY Country.id, City.id, Customers.id;
+
+
+------------------------------------------------------------------------
+TASK2
+----------------------------------------------------------------------
+SELECT
+		Country.country_name,
+		City.city_name,
+		Customers.customer_name,
+		Customers.customer_address,
+		Customers.next_call_date,
+		Customers.ts_inserted
+		FROM Country 
+		LEFT JOIN City  ON Country.id = City.country_id
+		LEFT JOIN Customers ON City.id = Customers.city_id;
+
+
+
+
+
+
+
